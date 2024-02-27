@@ -46,7 +46,7 @@ export default function App() {
     <div className="App">
       <HighlightedText text={ORIGINAL_TEXT} {...highlightSection} />
       <button disabled={disabled} onClick={handleClick}>
-        klik me
+        Click me
       </button>
     </div>
   );
