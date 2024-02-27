@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+This code defines a React component `App` that highlights text as it's being read aloud:
+
+1. The `ORIGINAL_TEXT` variable contains the text to be read aloud.
+2. The `splitText` function splits the text into three parts: the text before the highlighted portion (`start`), the highlighted portion (`highlight`), and the text after the highlighted portion (`finish`).
+3. The `HighlightedText` component takes the `text`, `from`, and `to` props and renders the text with the highlighted portion styled with a yellow background.
+4. The `App` component manages the `disabled` state for the button and the `highlightSection` state for the currently highlighted portion of the text.
+5. When the button is clicked, the `handleClick` function creates a new `SpeechSynthesisUtterance` object with the `ORIGINAL_TEXT` and sets up event listeners for the `start`, `end`, and `boundary` events. The `boundary` event updates the `highlightSection` state to highlight the currently spoken word.
+6. The `App` component renders the `HighlightedText` component with the `ORIGINAL_TEXT` and `highlightSection` props, along with a button that triggers the speech synthesis when clicked.
